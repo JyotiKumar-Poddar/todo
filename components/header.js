@@ -9,7 +9,6 @@ const Header = () => {
     );
 }
 
-
 const styles = StyleSheet.create({
 
     header: {
