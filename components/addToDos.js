@@ -30,20 +30,18 @@ const AddToDo = ({ addToDoHandler }) => {
 const styles = StyleSheet.create({
 
     todoInput: {
-        marginBottom: 10,
         paddingHorizontal: 8,
-        paddingVertical: 6,
         borderBottomWidth: 1,
         borderBottomColor: '#ddd'
     },
     addToDoButton: {
         padding: 20,
-        marginTop: 16,
+        marginTop: 10,
         backgroundColor: 'coral',
         borderRadius: 50,
-        width: 200,
-        margin: 75
-
+        width: 150,
+        marginLeft: 85,
+        alignItems: 'center'
     },
     addToDoButtonTitle: {
         textAlign: 'center',

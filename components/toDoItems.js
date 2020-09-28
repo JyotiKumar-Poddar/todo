@@ -4,10 +4,12 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 const ToDoItems = ({ item, onPresHandler }) => {
     return (
-        <TouchableOpacity onPress={() => onPresHandler(item.id)}>
+        <TouchableOpacity>
             <View style={styles.item}>
                 <Text>{item.title}</Text>
-                <MaterialIcons name="delete" size={24} color="ba" />
+                <TouchableOpacity onPress={() => onPresHandler(item.id)}>
+                    <MaterialIcons name="delete" size={24} color="ba" />
+                </TouchableOpacity>
             </View>
         </TouchableOpacity>
     )
