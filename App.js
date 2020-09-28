@@ -3,21 +3,22 @@ import { FlatList, StyleSheet, View, Alert, Keyboard, TouchableWithoutFeedback }
 import Header from './components/header'
 import ToDoItems from './components/toDoItems'
 import AddToDo from './components/addToDos'
+import FlexSandBox from './components/flexSnadBox'
 
 export default function App() {
 
   const [todos, setTodos] = useState([
     {
       "title": "Clean kitchen",
-      "id": 1
+      "id": "1"
     },
     {
       "title": "Call Eric",
-      "id": 2
+      "id": "2"
     },
     {
       "title": "Water flowers",
-      "id": 3
+      "id": "3"
     }
   ]);
 
@@ -29,9 +30,14 @@ export default function App() {
   const addToDoHandler = (todo) => {
     if (todo.length > 3) {
       setTodos((prevTodos) => {
+        console.log(prevTodos);
+        const newId = prevTodos != 'undefined' && prevTodos.length > 0 ?
+          (new Number(prevTodos[prevTodos.length - 1].id) + 1).toString() : "1";
+        console.log(newId);
         return [
-          { title: todo, id: prevTodos.length + 1 },
-          ...prevTodos
+          ...prevTodos,
+          { title: todo, id: newId }
+
         ]
       });
     } else {
@@ -42,6 +48,7 @@ export default function App() {
   }
 
   return (
+
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
         <Header />
@@ -68,14 +75,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   content: {
+    flex: 1,
     alignContent: 'center',
     padding: 30,
   },
 
   todoItem: {
+    flex: 1,
     fontSize: 15,
     fontWeight: 'bold',
     marginTop: 20,
-
   },
 });
