@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 
 
@@ -13,11 +13,13 @@ const AddToDo = ({ addToDoHandler }) => {
                 onChangeText={(todo) => {
                     setTodo(todo);
                 }}
+                value={todo}
                 placeholder="Enter your todo" />
 
             <TouchableOpacity
                 onPress={() => {
-                    addToDoHandler(todo)
+                    addToDoHandler(todo);
+                    setTodo('')
                 }}
                 style={styles.addToDoButton}>
                 <Text style={styles.addToDoButtonTitle} >Add ToDo</Text>

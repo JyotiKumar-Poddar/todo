@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { FlatList, StyleSheet, View, Alert, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { FlatList, StyleSheet, View, Alert, Keyboard, TouchableWithoutFeedback, Text } from 'react-native';
 import Header from './components/header'
 import ToDoItems from './components/toDoItems'
 import AddToDo from './components/addToDos'
 import FlexSandBox from './components/flexSnadBox'
-
+import { MaterialIcons } from '@expo/vector-icons';
 export default function App() {
 
   const [todos, setTodos] = useState([
@@ -30,10 +30,8 @@ export default function App() {
   const addToDoHandler = (todo) => {
     if (todo.length > 3) {
       setTodos((prevTodos) => {
-        console.log(prevTodos);
         const newId = prevTodos != 'undefined' && prevTodos.length > 0 ?
           (new Number(prevTodos[prevTodos.length - 1].id) + 1).toString() : "1";
-        console.log(newId);
         return [
           ...prevTodos,
           { title: todo, id: newId }
@@ -42,7 +40,7 @@ export default function App() {
       });
     } else {
       Alert.alert("Opps!", "Todo must be more than 3 characters",
-        [{ test: 'OK', onPress: () => console.log('ok cliked') }]
+        [{ test: 'OK' }]
       )
     }
   }

@@ -8,7 +8,7 @@ const ToDoItems = ({ item, onPresHandler }) => {
             <View style={styles.item}>
                 <Text>{item.title}</Text>
                 <TouchableOpacity onPress={() => onPresHandler(item.id)}>
-                    <MaterialIcons name="delete" size={24} color="ba" />
+                    <MaterialIcons name="delete" size={24} color="black" />
                 </TouchableOpacity>
             </View>
         </TouchableOpacity>
@@ -18,8 +18,8 @@ const ToDoItems = ({ item, onPresHandler }) => {
 const styles = StyleSheet.create({
 
     item: {
-        padding: 16,
-        marginTop: 16,
+        padding: 12,
+        marginTop: 12,
         borderColor: '#bbb',
         borderWidth: 1,
         borderStyle: 'dashed',
