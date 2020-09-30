@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View, Alert, Keyboard, TouchableWithoutFeedback, Text } from 'react-native';
 import Header from './components/header'
+import Fotter from './components/fotter'
 import ToDoItems from './components/toDoItems'
 import AddToDo from './components/addToDos'
 import FlexSandBox from './components/flexSnadBox'
@@ -50,6 +51,7 @@ export default function App() {
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
         <Header />
+
         <View style={styles.content}>
           <AddToDo addToDoHandler={addToDoHandler} />
           <View style={styles.todoItem}>
@@ -61,6 +63,7 @@ export default function App() {
             />
           </View>
         </View>
+        <Fotter />
       </View>
     </TouchableWithoutFeedback>
 

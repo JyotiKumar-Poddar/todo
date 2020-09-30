@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
-const Header = () => {
+const Fotter = () => {
     return (
         <View style={styles.header}>
-            <Text style={styles.title}>  My Todo's</Text>
+            <Text style={styles.title}> Made with <MaterialIcons name="favorite" size={15} color="#DDD" />
+            </Text>
         </View>
     );
 }
@@ -12,17 +14,14 @@ const Header = () => {
 const styles = StyleSheet.create({
 
     header: {
-        height: 80,
-        paddingTop: 25,
-        backgroundColor: 'coral',
         borderRadius: 80 / 2,
-        width: 360,
+        width: 400,
         alignContent: 'center',
-        margin: 25
+        marginBottom: 2
     },
     title: {
         textAlign: 'center',
-        color: '#FFF',
+        color: '#DDD',
         fontSize: 20,
         fontWeight: 'bold',
 
@@ -30,4 +29,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Header;
+export default Fotter;

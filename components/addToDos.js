@@ -22,7 +22,7 @@ const AddToDo = ({ addToDoHandler }) => {
                     setTodo('')
                 }}
                 style={styles.addToDoButton}>
-                <Text style={styles.addToDoButtonTitle} >Add ToDo</Text>
+                <Text style={styles.addToDoButtonTitle} >Add Todo</Text>
             </TouchableOpacity>
         </View>
     )
@@ -37,11 +37,11 @@ const styles = StyleSheet.create({
         borderBottomColor: '#ddd'
     },
     addToDoButton: {
-        padding: 20,
-        marginTop: 10,
+        padding: 15,
+        marginTop: 5,
         backgroundColor: 'coral',
         borderRadius: 50,
-        width: 150,
+        width: 130,
         marginLeft: 85,
         alignItems: 'center'
     },
