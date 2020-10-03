@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'coral',
         borderRadius: 50,
         width: 130,
-        marginLeft: 85,
+        marginLeft: 100,
         alignItems: 'center'
     },
     addToDoButtonTitle: {

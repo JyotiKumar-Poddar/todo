@@ -7,7 +7,7 @@ const ToDoItems = ({ item, onPresHandler }) => {
         <TouchableOpacity>
             <View style={styles.item}>
                 <Text>{item.title}</Text>
-                <TouchableOpacity onPress={() => onPresHandler(item.id)}>
+                <TouchableOpacity onPress={() => onPresHandler(item.key)}>
                     <MaterialIcons name="delete" size={24} color="black" />
                 </TouchableOpacity>
             </View>
